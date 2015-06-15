@@ -1,5 +1,5 @@
 
-# Code rust projects using vim
+# Use VIM as your RUST IDE
 
 
 ### Install vim first, if its not already
@@ -9,10 +9,10 @@
 sudo apt-get install vim
 
 ```
-* If your `vi` did work in your command line, most likely it is the light version of `vi` which is default installed in ubuntu
+* If your `vi` did work in your command line, most likely it is the light version of `vi` which is installed by default in ubuntu, and it lacks the most functionality of the real `vi`
 
 ### Install pathogen plugin
-* [Pathogen](https://github.com/tpope/vim-pathogen) is a vim plugin which allows you to easily install other plugins, by just adding files into the `~/.vim/bundle` (There are other alternatives, but pathogen is most likely used)
+[Pathogen](https://github.com/tpope/vim-pathogen) is a vim plugin which allows you to easily install other plugins, by just adding files into the `~/.vim/bundle` (There are other alternatives, but pathogen is most likely used)
 
 ```sh
 
@@ -29,7 +29,7 @@ filetype plugin indent on
 ```
 
 
-### Install syntax highlighting in rust
+### Install syntax highlighting for rust
 
 ```sh
 
@@ -40,12 +40,23 @@ git clone https://github.com/rust-lang/rust.vim.git
 
 ### Install vim racer plugin
 
-* [Racer](https://github.com/phildawes/racer) is utility to provide rust code completion for editors, and vim-racer is basically a wrapper for racer to work as a vim plugin
+[Racer](https://github.com/phildawes/racer) is utility to provide rust code completion for editors, and vim-racer is basically a wrapper for racer to work as a vim plugin
 
 ```sh
 cd .vim/bundle/
 git clone https://github.com/ebfe/vim-racer
 
+```
+* Download the source code of version of rust you may be using, say [1.0.0](https://github.com/rust-lang/rust/releases/tag/1.0.0)
+* Extract the zip file and put in your Development folder ie. `~/Developer`
+* Checkout and build racer
+
+```sh
+
+mkdir -p ~/Developer/
+cd ~/Developer/
+git clone https://github.com/phildawes/racer
+cargo build --release
 ```
 
 * Add this to ~/.vimrc
@@ -103,7 +114,7 @@ CTRL-ww - Switch between the files tab and the main window
 F2      - Focus cursor to files tab
 <Enter> - open the focused files/directory, duh!
 h,j,k,l - navigate the cursor left, down, up, right respectively
-i       - insert mode, you can start typing in you code.
+i       - insert mode, you can start typing in your code.
 <ESC>   - back to default mode, where you can issue commands in vi
 :w      - write/save the file, you are editing
 :wqa    - save the file, then quit the editor closing vi including the files tab
@@ -112,8 +123,8 @@ i       - insert mode, you can start typing in you code.
 ```
 * You don't really have to quit `wq` the editor, whenever you want to go back to the shell to build the project.
 A convenient way, is to open a new tab in a terminal via `<CTRL>` `<SHIFT>` `t`
-and issue you `cargo build --release` commands from there. That way, you don't loose state of your editor.
-* you can undo `u` or redo `<CTRL>` `r` your code changes when needed
+and issue you `cargo build --release` commands from there. That way, you don't loose state of your editor,
+i.e. you can undo `u` or redo `<CTRL>` `r` your code changes when needed
 
 ## Try to `vi`ew some files
 
