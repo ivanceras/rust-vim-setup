@@ -75,3 +75,10 @@ nmap <silent> <F2> :NERDTreeFind<CR>
 You can use `<CTRL-ww>`to switch in between windows
 
 vim cheatsheet at http://vim.rtorr.com/
+
+## Install in 1 go for the lazy
+
+```sh
+curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setup.sh | sh
+
+```

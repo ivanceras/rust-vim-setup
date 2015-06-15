@@ -8,7 +8,6 @@ git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 
 git clone https://github.com/scrooloose/nerdtree.git
 
+cp ~/.vimrc ~/.vimrc_backup
 
-curl -LSso /tmp/vimrc https://github.com/ivanceras/rust-vim-setup/vimrc
-
-cat /tmp/vimrc > ~/.vimrc
+curl -LSso ~/.vimrc https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/vimrc
