@@ -1,7 +1,6 @@
 
 # Code rust projects using vim
 
-![](https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/rust-vim.png)
 
 ### Install vim first, if its not already
 
@@ -94,6 +93,17 @@ F2      - Focus cursor to files tab
 <Enter> - open the focused files/directory, duh!
 
 ```
+## Try to `vi`ew some files
+
+```sh
+
+vi main.rs
+
+```
+* It should look like this
+
+![](https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/rust-vim.png)
+
 
 ## A helpful vim cheatsheet at
 * http://vim.rtorr.com/
