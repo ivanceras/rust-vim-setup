@@ -1,6 +1,15 @@
 
-## Using vim coding rust
-* Install pathogen
+# Using vim coding rust
+
+### Install vim first, if its not already
+
+```sh
+
+sudo apt-get install vim
+
+```
+
+### Install pathogen plugin
 
 ```sh
 
@@ -17,7 +26,7 @@ filetype plugin indent on
 ```
 
 
-* Install syntax highlighting in rust
+### Install syntax highlighting in rust
 
 ```sh
 
@@ -26,7 +35,7 @@ git clone https://github.com/rust-lang/rust.vim.git
 
 ```
 
-* Install vim racer plugin
+### Install vim racer plugin
 
 ```sh
 cd .vim/bundle/
@@ -43,7 +52,7 @@ let $RUST_SRC_PATH="~/Developer/rust-1.0.0/src"
 
 ```
 
-* Vim number toggle
+### Vim number toggle
 
 ```sh
 
@@ -51,7 +60,7 @@ cd ~/.vim/bundle
 git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 
 ```
-* Install nerdtree for displaying files in a tabs
+### Install nerdtree for displaying files in a tab
 
 ```sh
 
@@ -72,13 +81,29 @@ nmap <silent> <F2> :NERDTreeFind<CR>
 
 ```
 
-You can use `<CTRL-ww>`to switch in between windows
-
-vim cheatsheet at http://vim.rtorr.com/
-
-## Install in 1 go for the lazy
+## Controls
 
 ```sh
+
+CTRL-t  - Open/Close the files tab
+CTRL-n  - Toggle relative / absolute numbering
+CTRL-ww - Switch between the files tab and the opened source
+F2      - Focus cursor to files tab
+<Enter> - open the focused files/directory, duh!
+
+```
+
+## A helpful vim cheatsheet at
+* http://vim.rtorr.com/
+
+
+## Install in one go for the lazy or those who never have used their vim before
+* Make sure you know what you are doing
+* This will replace your existing ~/.vimrc, if you have one
+* Don't held me responsible
+
+```sh
+
 curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setup.sh | sh
 
 ```
