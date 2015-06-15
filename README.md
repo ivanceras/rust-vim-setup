@@ -7,17 +7,18 @@
 ```sh
 
 sudo apt-get install vim
-
 ```
-* If your `vi` did work in your command line, most likely it is the light version of `vi` which is installed by default in ubuntu, and it lacks the most functionality of the real `vi`
+If your `vi` did work in your command line, most likely it is the light version of `vi` which is installed by default in ubuntu, and it lacks the most functionality of the real `vi`
+
+
+
 
 ### Install pathogen plugin
-[Pathogen](https://github.com/tpope/vim-pathogen) is a vim plugin which allows you to easily install other plugins, by just adding files into the `~/.vim/bundle` (There are other alternatives, but pathogen is most likely used)
+[Pathogen](https://github.com/tpope/vim-pathogen) is a vim plugin which allows you to easily install other plugins, by just adding files into the `~/.vim/bundle` (There are other alternatives, but pathogen is most commonly used)
 
 ```sh
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
 ```
 * Add this to ~/.vimrc
 
@@ -25,8 +26,9 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-
 ```
+
+
 
 
 ### Install syntax highlighting for rust
@@ -35,8 +37,9 @@ filetype plugin indent on
 
 cd ~/.vim/bundle
 git clone https://github.com/rust-lang/rust.vim.git
-
 ```
+
+
 
 ### Install vim racer plugin
 
@@ -45,8 +48,8 @@ git clone https://github.com/rust-lang/rust.vim.git
 ```sh
 cd .vim/bundle/
 git clone https://github.com/ebfe/vim-racer
-
 ```
+
 * Download the source code of version of rust you may be using, say [1.0.0](https://github.com/rust-lang/rust/releases/tag/1.0.0)
 * Extract the zip file and put in your Development folder ie. `~/Developer`
 * Checkout and build racer
@@ -65,10 +68,11 @@ cargo build --release
 set hidden
 let g:racer_cmd = "~/Developer/racer/target/release/racer"
 let $RUST_SRC_PATH="~/Developer/rust-1.0.0/src"
-
 ```
 
-### Vim number toggle
+
+
+### Install Vim number toggle
 
 [vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle) shows line numbers to the code you are editing in vim,
 You can toggle the numbers to absolute or relative position with respect to your current cursor location.
@@ -80,8 +84,10 @@ This will boost your productivity later, when you orchestrate vim commands such 
 
 cd ~/.vim/bundle
 git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
-
 ```
+
+
+
 ### Install NERDtree for displaying files in a tab
 [NERDTree](https://github.com/scrooloose/nerdtree) is kind of like the left side tabs of most text editors such as `sublime`, `atom`, or `eclipse` where it list down the files in the current directory you are editing from.
 
@@ -89,7 +95,6 @@ git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
-
 ```
 * Add this to ~/.vimrc
 
@@ -101,8 +106,9 @@ autocmd BufEnter * NERDTreeMirror
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 "Set F2 to put the cursor to the nerdtree
 nmap <silent> <F2> :NERDTreeFind<CR>
-
 ```
+
+
 
 ## Controls
 
@@ -118,31 +124,35 @@ i       - insert mode, you can start typing in your code.
 <ESC>   - back to default mode, where you can issue commands in vi
 :w      - write/save the file, you are editing
 :wqa    - save the file, then quit the editor closing vi including the files tab
-
-
 ```
+
 * You don't really have to quit `wq` the editor, whenever you want to go back to the shell to build the project.
 A convenient way, is to open a new tab in a terminal via `<CTRL>` `<SHIFT>` `t`
 and issue you `cargo build --release` commands from there. That way, you don't loose state of your editor,
 i.e. you can undo `u` or redo `<CTRL>` `r` your code changes when needed
+
+
 
 ## Try to `vi`ew some files
 
 ```sh
 
 vi main.rs
-
 ```
 
 
 
-* It should look like this
+* It should look something like this
 
 ![](https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/rust-vim.png)
 
 
+
+
 ## A helpful vim cheatsheet at
 * http://vim.rtorr.com/
+
+
 
 
 ## Install in one go for the lazy or those who never have used their vim before
@@ -153,7 +163,6 @@ vi main.rs
 ```sh
 
 curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setup.sh | sh
-
 ```
 
 The one-go setup script requires the following packages must have been installed in your machine:
@@ -162,12 +171,10 @@ The one-go setup script requires the following packages must have been installed
 
 Or else it wont work.
 
-Install these via
+Install these via and try again
 
 ```sh
 
 sudo apt-get install curl
 sudo apt-get install git
-
-
 ```
