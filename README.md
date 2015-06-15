@@ -9,8 +9,10 @@
 sudo apt-get install vim
 
 ```
+* If your `vi` did work in your command line, most likely it is the light version of `vi` which is default installed in ubuntu
 
 ### Install pathogen plugin
+* [Pathogen](https://github.com/tpope/vim-pathogen) is a vim plugin which allows you to easily install other plugins, by just adding files into the `~/.vim/bundle` (There are other alternatives, but pathogen is most likely used)
 
 ```sh
 
@@ -38,6 +40,8 @@ git clone https://github.com/rust-lang/rust.vim.git
 
 ### Install vim racer plugin
 
+* [Racer](https://github.com/phildawes/racer) is utility to provide rust code completion for editors, and vim-racer is basically a wrapper for racer to work as a vim plugin
+
 ```sh
 cd .vim/bundle/
 git clone https://github.com/ebfe/vim-racer
@@ -55,13 +59,20 @@ let $RUST_SRC_PATH="~/Developer/rust-1.0.0/src"
 
 ### Vim number toggle
 
+[vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle) shows line numbers to the code you are editing in vim,
+You can toggle the numbers to absolute or relative position with respect to your current cursor location.
+This will boost your productivity later, when you orchestrate vim commands such as moving 10 lines below the current cursor location `10j`
+
+
+
 ```sh
 
 cd ~/.vim/bundle
 git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 
 ```
-### Install nerdtree for displaying files in a tab
+### Install NERDtree for displaying files in a tab
+[NERDTree](https://github.com/scrooloose/nerdtree) is kind of like the left side tabs of most text editors such as `sublime`, `atom`, or `eclipse` where it list down the files in the current directory you are editing from.
 
 ```sh
 
@@ -91,8 +102,19 @@ CTRL-n  - Toggle relative / absolute numbering
 CTRL-ww - Switch between the files tab and the main window
 F2      - Focus cursor to files tab
 <Enter> - open the focused files/directory, duh!
+h,j,k,l - navigate the cursor left, down, up, right respectively
+i       - insert mode, you can start typing in you code.
+<ESC>   - back to default mode, where you can issue commands in vi
+:w      - write/save the file, you are editing
+:wqa    - save the file, then quit the editor closing vi including the files tab
+
 
 ```
+* You don't really have to quit `wq` the editor, whenever you want to go back to the shell to build the project.
+A convenient way, is to open a new tab in a terminal via `<CTRL>` `<SHIFT>` `t`
+and issue you `cargo build --release` commands from there. That way, you don't loose state of your editor.
+* you can undo `u` or redo `<CTRL>` `r` your code changes when needed
+
 ## Try to `vi`ew some files
 
 ```sh
@@ -100,6 +122,9 @@ F2      - Focus cursor to files tab
 vi main.rs
 
 ```
+
+
+
 * It should look like this
 
 ![](https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/rust-vim.png)
@@ -111,11 +136,27 @@ vi main.rs
 
 ## Install in one go for the lazy or those who never have used their vim before
 * Make sure you know what you are doing
-* This will replace your existing ~/.vimrc, if you have one
+* This will replace your existing ``~/.vimrc`, if you have one
 * Don't held me responsible
 
 ```sh
 
 curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setup.sh | sh
+
+```
+
+The one-go setup script requires the following packages must have been installed in your machine:
+* `curl`
+* `git`
+
+Or else it wont work.
+
+Install these via
+
+```sh
+
+sudo apt-get install curl
+sudo apt-get install git
+
 
 ```
