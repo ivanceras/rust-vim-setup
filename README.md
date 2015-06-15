@@ -1,5 +1,7 @@
 
-# Using vim coding rust
+# Code rust projects using vim
+
+![](https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/rust-vim.png)
 
 ### Install vim first, if its not already
 
