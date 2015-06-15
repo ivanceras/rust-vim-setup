@@ -71,7 +71,7 @@ git clone https://github.com/scrooloose/nerdtree.git
 ```
 * Add this to ~/.vimrc
 
-```sh
+```
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 
@@ -88,7 +88,7 @@ nmap <silent> <F2> :NERDTreeFind<CR>
 
 CTRL-t  - Open/Close the files tab
 CTRL-n  - Toggle relative / absolute numbering
-CTRL-ww - Switch between the files tab and the opened source
+CTRL-ww - Switch between the files tab and the main window
 F2      - Focus cursor to files tab
 <Enter> - open the focused files/directory, duh!
 
