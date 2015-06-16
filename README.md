@@ -20,7 +20,7 @@ If your `vi` did work in your command line, most likely it is the light version 
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
-* Add this to ~/.vimrc
+* Add this to `~/.vimrc`
 
 ```sh
 execute pathogen#infect()
@@ -46,7 +46,7 @@ git clone https://github.com/rust-lang/rust.vim.git
 [Racer](https://github.com/phildawes/racer) is utility to provide rust code completion for editors, and vim-racer is basically a wrapper for racer to work as a vim plugin
 
 ```sh
-cd .vim/bundle/
+cd ~/.vim/bundle/
 git clone https://github.com/ebfe/vim-racer
 ```
 
@@ -62,7 +62,7 @@ git clone https://github.com/phildawes/racer
 cargo build --release
 ```
 
-* Add this to ~/.vimrc
+* Add this to `~/.vimrc`
 
 ```
 set hidden
@@ -96,17 +96,19 @@ git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 ```
-* Add this to ~/.vimrc
+* Add this to `~/.vimrc`
 
 ```
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 
-"CTRL-N to toggle tree view with CTRL-N
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+"CTRL-t to toggle tree view with CTRL-t
+nmap <silent> <C-t> :NERDTreeToggle<CR>
 "Set F2 to put the cursor to the nerdtree
 nmap <silent> <F2> :NERDTreeFind<CR>
 ```
+
+
 
 
 
@@ -172,7 +174,7 @@ However, If you are really serious about using vi and want to maximize your `vi`
 
 ## Install in one go for the lazy or those who never have used their vim before
 * Make sure you know what you are doing
-* This will replace your existing ``~/.vimrc`, if you have one
+* This will replace your existing `~/.vimrc`, if you have one
 * Don't held me responsible
 
 ```sh
