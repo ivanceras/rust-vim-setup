@@ -11,6 +11,20 @@ sudo apt-get install vim
 If your `vi` did work in your command line, most likely it is the light version of `vi` which is installed by default in ubuntu, and it lacks the most functionality of the real `vi`
 
 
+You also need to install
+
+* `curl`
+* `git`
+
+I assume most of you have already installed it, if not then install it via
+
+```sh
+
+sudo apt-get install curl
+sudo apt-get install git
+```
+
+
 
 
 ### Install pathogen plugin
@@ -18,7 +32,8 @@ If your `vi` did work in your command line, most likely it is the light version 
 
 ```sh
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 * Add this to `~/.vimrc`
 
@@ -171,7 +186,7 @@ However, If you are really serious about using vi and want to maximize your `vi`
 * http://vim.rtorr.com/
 
 
-## Automatically reload files when changed 
+## Automatically reload files when changed
 
 Sometimes some of your files maybe edited outside of your current `vi` session, such other editors/code generators, dropbox sync, git pulls.
 You may want to have that content be in your current `vi` session instead.
@@ -195,16 +210,11 @@ au CursorHold * checktime
 curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setup.sh | sh
 ```
 
-The one-go setup script requires the following packages must have been installed in your machine:
-* `curl`
-* `git`
+## Comeback here for changes?
 
-Or else it wont work.
-
-Install these via and try again
+* Update it via
 
 ```sh
 
-sudo apt-get install curl
-sudo apt-get install git
+curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/update.sh | sh
 ```
