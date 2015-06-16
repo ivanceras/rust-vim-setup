@@ -153,7 +153,7 @@ vi main.rs
 
 If you want to be able to use the mouse to point and click files, move the cursor around.
 
-add this to your `~/.vimrc`
+* Add this to your `~/.vimrc`
 
 ```sh
 
