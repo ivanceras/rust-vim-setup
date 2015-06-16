@@ -165,6 +165,7 @@ Additionally by default, you can use the arrow keys to navigate the cursor.
 However, If you are really serious about using vi and want to maximize your `vi` skills, you should minimize the use of the arrow keys or the mouse.
 
 
+![Using Mouse](https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/using-mouse.gif)
 
 ## A helpful vim cheatsheet at
 * http://vim.rtorr.com/
