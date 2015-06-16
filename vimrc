@@ -19,3 +19,6 @@ nnoremap <silent> <C-n> :call NumberToggle()<cr>
 "CTRL-t to toggle tree view with CTRL-t
 nmap <silent> <C-t> :NERDTreeToggle<CR>
 nmap <silent> <F2> :NERDTreeFind<CR>
+
+"enable mouse support
+set mouse=a
