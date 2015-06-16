@@ -153,7 +153,7 @@ vi main.rs
 
 If you want to be able to use the mouse to point and click files, move the cursor around.
 
-add this to your `./vimrc`
+add this to your `~/.vimrc`
 
 ```sh
 
@@ -162,7 +162,7 @@ set mouse=a
 ```
 
 Additionally by default, you can use the arrow keys to navigate the cursor.
-However, If you are really serious about using vi and want to maximize your `vi` skills, you should minimize the use of the arrow keys or the mouse,
+However, If you are really serious about using vi and want to maximize your `vi` skills, you should minimize the use of the arrow keys or the mouse.
 
 
 
