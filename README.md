@@ -20,7 +20,7 @@ If your `vi` did work in your command line, most likely it is the light version 
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
-* Add this to ~/.vimrc
+* Add this to `~/.vimrc`
 
 ```sh
 execute pathogen#infect()
@@ -62,7 +62,7 @@ git clone https://github.com/phildawes/racer
 cargo build --release
 ```
 
-* Add this to ~/.vimrc
+* Add this to `~/.vimrc`
 
 ```
 set hidden
@@ -96,7 +96,7 @@ git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 ```
-* Add this to ~/.vimrc
+* Add this to `~/.vimrc`
 
 ```
 autocmd VimEnter * NERDTree
