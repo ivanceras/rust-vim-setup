@@ -159,7 +159,7 @@ vi main.rs
 
 ## Install in one go for the lazy or those who never have used their vim before
 * Make sure you know what you are doing
-* This will replace your existing ``~/.vimrc`, if you have one
+* This will replace your existing `~/.vimrc`, if you have one
 * Don't held me responsible
 
 ```sh
