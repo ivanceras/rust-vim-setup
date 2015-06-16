@@ -155,7 +155,7 @@ If you want to be able to use the mouse to point and click files, move the curso
 
 * Add this to your `~/.vimrc`
 
-```sh
+```
 
 "enable mouse support
 set mouse=a
@@ -171,7 +171,19 @@ However, If you are really serious about using vi and want to maximize your `vi`
 * http://vim.rtorr.com/
 
 
+## Automatically reload files when changed 
 
+Sometimes some of your files maybe edited outside of your current `vi` session, such other editors/code generators, dropbox sync, git pulls.
+You may want to have that content be in your current `vi` session instead.
+
+* Add this to your `~/.vimrc`
+
+```
+
+" check file change every 4 seconds ('CursorHold') and reload the buffer upon detecting change
+set autoread
+au CursorHold * checktime  
+```
 
 ## Install in one go for the lazy or those who never have used their vim before
 * Make sure you know what you are doing
