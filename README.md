@@ -46,7 +46,7 @@ git clone https://github.com/rust-lang/rust.vim.git
 [Racer](https://github.com/phildawes/racer) is utility to provide rust code completion for editors, and vim-racer is basically a wrapper for racer to work as a vim plugin
 
 ```sh
-cd .vim/bundle/
+cd ~/.vim/bundle/
 git clone https://github.com/ebfe/vim-racer
 ```
 
@@ -102,11 +102,13 @@ git clone https://github.com/scrooloose/nerdtree.git
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 
-"CTRL-N to toggle tree view with CTRL-N
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+"CTRL-t to toggle tree view with CTRL-t
+nmap <silent> <C-t> :NERDTreeToggle<CR>
 "Set F2 to put the cursor to the nerdtree
 nmap <silent> <F2> :NERDTreeFind<CR>
 ```
+
+
 
 
 
