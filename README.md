@@ -80,12 +80,16 @@ cargo build --release
 * Add this to `~/.vimrc`
 
 ```
-set hidden
 let g:racer_cmd = "~/Developer/racer/target/release/racer"
 let $RUST_SRC_PATH="~/Developer/rust-1.0.0/src"
 ```
 
+If you are installing into gVim on Windows, the file to edit will be `~/_vimrc`, and you will need to use escaped-backslash paths, like
 
+```
+let g:racer_cmd = "X:\\PathTo\\Rust\\racer\\target\\release\\racer.exe"
+let $RUST_SRC_PATH="X:\\PathTo\\Rust\\src\\rustc-1.4.0\\src"
+```
 
 ### Install Vim number toggle
 
