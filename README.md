@@ -62,10 +62,16 @@ git clone https://github.com/rust-lang/rust.vim.git
 
 ```sh
 cd ~/.vim/bundle/
-git clone https://github.com/ebfe/vim-racer
+
+git clone https://github.com/racer-rust/vim-racer
+
+mkdir -p ~/.vim/plugin
+
+cp ~/.vim/bundle/vim-racer/plugin/racer.vim ~/.vim/plugin
+
 ```
 
-* Download the source code of version of rust you may be using, say [1.0.0](https://github.com/rust-lang/rust/releases/tag/1.0.0)
+* Download the source code of version of rust you may be using, say [master branch](https://github.com/rust-lang/rust/)
 * Extract the zip file and put in your Development folder ie. `~/Developer`
 * Checkout and build racer
 
@@ -81,8 +87,8 @@ cargo build --release
 
 ```
 set hidden
-let g:racer_cmd = "~/Developer/racer/target/release/racer"
-let $RUST_SRC_PATH="~/Developer/rust-1.0.0/src"
+let g:racer_cmd = "$HOME/Developer/racer/target/release/racer"
+let $RUST_SRC_PATH="$HOME/Developer/rust-master/src"
 ```
 
 
@@ -142,11 +148,30 @@ i       - insert mode, you can start typing in your code.
 :w      - write/save the file, you are editing
 :wqa    - save the file, then quit the editor closing vi including the files tab
 ```
+## Some advance commands
 
+```sh
+
+:bp - Open previous file/buffer
+:bn - Open next file/buffer
+:b <filename-part> - Open the file you are looking for without typing the exact filename
+:vsp - vertically split the window
+:vsp <filename> - open the file in vertical split
+:sp - horizontal split
+:sp <filename> - open the file in horizontal split
+
+```
 * You don't really have to quit `wq` the editor, whenever you want to go back to the shell to build the project.
 A convenient way, is to open a new tab in a terminal via `<CTRL>` `<SHIFT>` `t`
 and issue you `cargo build --release` commands from there. That way, you don't loose state of your editor,
 i.e. you can undo `u` or redo `<CTRL>` `r` your code changes when needed
+
+## Compile without opening another tab
+Alternatively, you can compile your project without opening another terminal instance by issuing the command using `:! <external terminal command>`
+
+```sh
+:! cargo run --release
+```
 
 
 
