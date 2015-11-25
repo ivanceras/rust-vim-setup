@@ -89,9 +89,15 @@ cargo build --release
 set hidden
 let g:racer_cmd = "$HOME/Developer/racer/target/release/racer"
 let $RUST_SRC_PATH="$HOME/Developer/rust-master/src"
+
 ```
 
+If you are installing into gVim on Windows, the file to edit will be `~/_vimrc`, and you will need to use escaped-backslash paths, like
 
+```
+let g:racer_cmd = "X:\\PathTo\\Rust\\racer\\target\\release\\racer.exe"
+let $RUST_SRC_PATH="X:\\PathTo\\Rust\\src\\rustc-1.4.0\\src"
+```
 
 ### Install Vim number toggle
 
@@ -233,6 +239,16 @@ au CursorHold * checktime
 ```sh
 
 curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setup.sh | sh
+```
+
+## Comeback here for changes?
+
+* Update it via
+
+```sh
+
+curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/update.sh | sh
+```/master/setup.sh | sh
 ```
 
 ## Comeback here for changes?

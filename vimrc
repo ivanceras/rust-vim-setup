@@ -26,3 +26,9 @@ set mouse=a
 " check file change every 4 seconds ('CursorHold') and reload the buffer upon detecting change
 set autoread
 au CursorHold * checktime
+
+"convert tabs to 4 spaces
+set tabstop=4
+
+"global clipboard for copy pasting between terminals
+set clipboard=unnamedplus
