@@ -11,11 +11,12 @@
 	<F2>			set focus on the nerd tree
 
 ## Rust specific commands
-CTRL-x CTRL-o   activate auto rust autocompeletion (example: type in `String::` then press CTRL-x CTRL-o then select from the drop down list the appropriate functions)
-gd              go to function/struct/variable declaration of the focused item ( this is equivalent to eclipse' open declaration )
-gD              go to declaration split open in window tab
-:bp             to go back to the previous edited file (very useful when following a declaration)
-:b <part of filename>  when you have open a lot of files, this comes in handy in showing back the previously open files
+
+	CTRL-x CTRL-o   activate auto rust autocompeletion (example: type in `String::` then press CTRL-x CTRL-o then select from the drop down list the appropriate functions)
+	gd              go to function/struct/variable declaration of the focused item ( this is equivalent to eclipse' open declaration )
+	gD              go to declaration split open in window tab
+	:bp             to go back to the previous edited file (very useful when following a declaration)
+	:b <part of filename>  when you have open a lot of files, this comes in handy in showing back the previously open files
 
 
 # NERDTree specific commands
