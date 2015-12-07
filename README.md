@@ -247,16 +247,6 @@ curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/setup.sh 
 
 ## Comeback here for changes?
 
-* Update it via
-
-```sh
-
-curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/update.sh | sh
-
-```
-
-## Comeback here for changes?
-
 * Update it via (same as setup)
 
 ```sh
