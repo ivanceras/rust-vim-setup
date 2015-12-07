@@ -215,6 +215,7 @@ However, If you are really serious about using vi and want to maximize your `vi`
 
 ## A helpful vim cheatsheet at
 * http://vim.rtorr.com/
+* [My Comprehensive List](https://github.com/ivanceras/rust-vim-setup/blob/master/VIM_Notes.md)
 
 
 ## Automatically reload files when changed
