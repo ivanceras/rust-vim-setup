@@ -238,7 +238,7 @@ au CursorHold * checktime
 
 ```sh
 
-curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setup.sh | sh
+curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/setup.sh | sh
 ```
 
 ## Comeback here for changes?
@@ -248,7 +248,7 @@ curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setu
 ```sh
 
 curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/update.sh | sh
-```/master/setup.sh | sh
+
 ```
 
 ## Comeback here for changes?
