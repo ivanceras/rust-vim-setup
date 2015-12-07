@@ -2,7 +2,6 @@
 # Basic Controls
 	CTRL-t 			open or close nerdtree
 	CTRL-n 			toggle relative / absolute numbering
-	CTRL-x CTRL-o   activate auto rust autocompeletion
 	CTRL-w w 		switch focus on nerdtree and open windows
 	h,j,k,l			navigate the cursor left, down, up, right respectively
 	i				insert mode, you can start typing in your code
@@ -12,9 +11,11 @@
 	<F2>			set focus on the nerd tree
 
 ## Rust specific commands
-	gd				go to function/struct/variable declaration of the focused item
-					*this is equivalent to eclipse' open declaration*
-	gD				go to declaration split open in window tab
+CTRL-x CTRL-o   activate auto rust autocompeletion (example: type in `String::` then press CTRL-x CTRL-o then select from the drop down list the appropriate functions)
+gd              go to function/struct/variable declaration of the focused item ( this is equivalent to eclipse' open declaration )
+gD              go to declaration split open in window tab
+:bp             to go back to the previous edited file (very useful when following a declaration)
+:b <part of filename>  when you have open a lot of files, this comes in handy in showing back the previously open files
 
 
 # NERDTree specific commands
