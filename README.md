@@ -247,7 +247,7 @@ curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/setu
 
 ```sh
 
-curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/update.sh | sh
+curl -sSf https://raw.githubusercontent.com/ivanceras/Rustupefy/master/update.sh | sh
 ```/master/setup.sh | sh
 ```
 
@@ -257,5 +257,5 @@ curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/upda
 
 ```sh
 
-curl -sSf https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/update.sh | sh
+curl -sSf https://raw.githubusercontent.com/ivanceras/Rustupefy/master/update.sh | sh
 ```
