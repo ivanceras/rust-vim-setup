@@ -27,19 +27,26 @@ au CursorHold * checktime
 
 "convert tabs to 4 spaces
 set tabstop=4
+"shift/indent also to 4 spaces
 set shiftwidth=4
+"auto indent (pressing enter, will indent)
 set ai
 
 "global clipboard for copy pasting between terminals
 set clipboard=unnamedplus
 
+
+"use the power line fonts
 let g:airline_powerline_fonts = 1
+
+"This will allow the airline plugin to load up as soon as you start editing a file
 set laststatus=2
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"to get colors working correctly.
 set t_Co=256
-set noshowmode
+
+"to hide the default mode (INSERT, NORMAL, etc)
+set noshowmode 
 
 " get rid of the `|` in the window splits (signifcant whitespace after \ )
 set fillchars+=vert:\ 
