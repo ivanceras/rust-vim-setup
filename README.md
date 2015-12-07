@@ -257,11 +257,11 @@ curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/update.sh
 
 ## Comeback here for changes?
 
-* Update it via
+* Update it via (same as setup)
 
 ```sh
 
-curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/update.sh | sh
+curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/setup.sh | sh
 
 ```
 
