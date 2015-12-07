@@ -231,14 +231,28 @@ set autoread
 au CursorHold * checktime  
 ```
 
+
 ## Install in one go for the lazy or those who never have used their vim before
 * Make sure you know what you are doing
-* This will replace your existing `~/.vimrc`, if you have one
-* Don't held me responsible
+* This will replace your existing `~/.vimrc` and `.vim`, if you have one (No worries for non vim users)
+* Don't held me responsible for breaking your vim configuration, your laundry machine and anything that makes you angry.
 
 ```sh
+
+sudo apt-get install curl
 
 curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/setup.sh | sh
+
+```
+
+## Comeback here for changes?
+
+* Update it via
+
+```sh
+
+curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/update.sh | sh
+
 ```
 
 ## Comeback here for changes?
@@ -251,11 +265,10 @@ curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/update.sh
 
 ```
 
-## Comeback here for changes?
-
-* Update it via
+## Uninstall
 
 ```sh
 
-curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/update.sh | sh
+curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/uninstall.sh | sh
+
 ```
