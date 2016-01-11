@@ -235,4 +235,6 @@ ea  		append at end of word
 	g,   		go to next edit
 	CTRL-o  	go to previous edit
 	CTRL-i  	to to next edit
+	''		jump to last location (no-edits)
+	``		jump to last location (no-edits)
 
