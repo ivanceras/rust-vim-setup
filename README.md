@@ -56,18 +56,19 @@ git clone https://github.com/rust-lang/rust.vim.git
 
 
 
-### Install vim racer plugin
+### Install YouCompleteMe
 
-[Racer](https://github.com/phildawes/racer) is utility to provide rust code completion for editors, and vim-racer is basically a wrapper for racer to work as a vim plugin
+[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - a code-completion engine for Vim with support for C-family languages and [Rust](http://blog.jwilm.io/youcompleteme-rust)
 
 ```sh
-cd ~/.vim/bundle/
 
-git clone https://github.com/racer-rust/vim-racer
+git clone https://github.com/Valloric/YouCompleteMe
 
-mkdir -p ~/.vim/plugin
+cd ~/.vim/bundle/YouCompleteMe
 
-cp ~/.vim/bundle/vim-racer/plugin/racer.vim ~/.vim/plugin
+git submodule update --init --recursive
+
+./install.py --racer-completer
 
 ```
 
@@ -79,25 +80,14 @@ cp ~/.vim/bundle/vim-racer/plugin/racer.vim ~/.vim/plugin
 
 mkdir -p ~/Developer/
 cd ~/Developer/
-git clone https://github.com/phildawes/racer
-cargo build --release
-```
-
-* Add this to `~/.vimrc`
+git clone --depth 1 --branch master https://github.com/rust-lang/rust rust-master
 
 ```
-set hidden
-let g:racer_cmd = "$HOME/Developer/racer/target/release/racer"
-let $RUST_SRC_PATH="$HOME/Developer/rust-master/src"
+Add this to your .vimrc
 
-```
+let g:ycm_rust_src_path="/home/<username>/Developer/rust-master/src/"
 
-If you are installing into gVim on Windows, the file to edit will be `~/_vimrc`, and you will need to use escaped-backslash paths, like
 
-```
-let g:racer_cmd = "X:\\PathTo\\Rust\\racer\\target\\release\\racer.exe"
-let $RUST_SRC_PATH="X:\\PathTo\\Rust\\src\\rustc-1.4.0\\src"
-```
 
 ### Install Vim number toggle
 
@@ -231,6 +221,32 @@ You may want to have that content be in your current `vi` session instead.
 set autoread
 au CursorHold * checktime  
 ```
+
+
+
+
+## Enable the global Clipboard in vim
+In Linux distros, for some reason, you have to install `vim-gtk` first to gain clipboard functionality.
+http://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-using-vim
+
+```sh
+
+sudo apt-get install vim-gtk
+
+```
+The you can
+
+Copy to `+` register, which is the global/OS clipboard
+"+y
+
+Paste from `+` register
+"+p
+
+
+Pasting is equivalent to 
+
+CTRL-SHIFT-v in insert mode. It is equivalent to Paste (CTRL-v) when used in terminal
+
 
 
 ## Install in one go for the lazy or those who never have used their vim before

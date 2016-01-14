@@ -102,7 +102,7 @@
     A  		append at the end of the line
     o  		open (append) blank line below current line (no need to press return)
     O  		open blank line above current line
-ea  		append at end of word
+	ea  	append at end of word
     ESC  	exit insert mode, to normal mode
     
 # Editing
@@ -157,6 +157,7 @@ ea  		append at end of word
     ib 		inner () block
     iB 		inner {} block
     ESC 	exit visual mode, go to normal mode
+    gv		re-select the last selected visual area
    
    	*Note: right after entering visual mode, you can use the same cursor movement commands in the normal/default mode to highlight your selection*
     
@@ -222,7 +223,10 @@ ea  		append at end of word
     CTRL-w J  		Move current window to the bottom
     CTRL-w L  		Move current window to the right
     
-
+## Window movements
+	CTRL-w |		Maximize the window horizontally
+	CTRL-w _		Maximize the window vertically
+	CTRL-w =		Resize all window to equal sizes
     
 # Changeset, last edit jumping back and forth
 	`.  		jump to the last edit
