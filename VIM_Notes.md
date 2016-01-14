@@ -210,6 +210,11 @@
     CTRL-w q  		Quit a window
     CTRL-w v  		Split windows vertically
     CTRL-w x  		Swap the current window with the next one
+    :e#                 Open previous file
+    CTRL-^              Edit the alternate file.  Mostly the alternate file is
+                        the previously edited file.  This is a quick way to
+                        toggle between two files.  It is equivalent to ":e#",
+                        except that it also works when there is no file name.
 
 ### Moving the cursor in between windows
     CTRL-w h  		Move cursor left to the current window
@@ -234,4 +239,6 @@
 	g,   		go to next edit
 	CTRL-o  	go to previous edit
 	CTRL-i  	to to next edit
+	''		jump to last location (no-edits)
+	``		jump to last location (no-edits)
 
