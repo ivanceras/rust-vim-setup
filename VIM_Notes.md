@@ -194,7 +194,11 @@
     n  				repeat search in same direction
     N  				repeat search in opposite direction
     :%s/old/new/g  	replace all old with new throughout file
-    :%s/old/new/gc  replace all old with new throughout file with confirmations
+    :%s/old/new/gc      replace all old with new throughout file with confirmations
+    %                   Go to the corresponding (, {, [.
+    *                   Go to next occurrence of the word under the cursor
+    #                   Go to previous occurrence of the word under the cursor
+
     
 # Working with multiple files
     
