@@ -66,6 +66,7 @@ git clone https://github.com/rust-lang/rust.vim.git
 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - a code-completion engine for Vim with support for C-family languages and [Rust](http://blog.jwilm.io/youcompleteme-rust)
 
 ```sh
+cd ~/.vim/bundle
 
 git clone https://github.com/Valloric/YouCompleteMe
 
