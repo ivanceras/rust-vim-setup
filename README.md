@@ -15,6 +15,9 @@ You also need to install
 
 * `curl`
 * `git`
+* `CMake`
+* Python Headers
+* Development Tools
 
 I assume most of you have already installed it, if not then install it via
 
@@ -22,6 +25,8 @@ I assume most of you have already installed it, if not then install it via
 
 sudo apt-get install curl
 sudo apt-get install git
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev python3-dev
 ```
 
 
