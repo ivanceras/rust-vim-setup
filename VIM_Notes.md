@@ -246,3 +246,21 @@
 	''		jump to last location (no-edits)
 	``		jump to last location (no-edits)
 
+# Fuzzy searching files with CTRL.P plugin
+    CTRL-p    Open up search user interface
+              you can then start typing what you are looking for
+    CTRL-f    By default your search text is match against files,
+              pressing CTRL-f will switch to match for content of the files, buffers,
+              directories, etc.
+    CTRL-b    same as CTRL-f but cycle on opposite direction
+
+    CTRL-j    Move down 1 line of the search results
+    CTRL-k    Move up 1 line on the search results
+    <Enter>   Open the file of the focused line in the search result
+    CTRL-t    Open the focused file of the line in the search result in a new tab
+    CTRL-v    Open the focused file of the line in the search result in a vertical split
+    CTRL-x    Open the focused file of the line in the search result in a horizontal split
+    CTRL-z    Mark select the focused file of the line in the search result
+    CTRL-o    Opens all the mark selected files in the search results
+
+
