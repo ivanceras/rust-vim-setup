@@ -74,7 +74,7 @@ cd ~/.vim/bundle/YouCompleteMe
 
 git submodule update --init --recursive
 
-./install.py --racer-completer
+./install.py --rust-completer
 
 ```
 
