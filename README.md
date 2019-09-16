@@ -89,9 +89,11 @@ cd ~/Developer/
 git clone --depth 1 --branch master https://github.com/rust-lang/rust rust-master
 
 ```
-Add this to your .vimrc
+Add this to your `.vimrc`
 
+```sh
 let g:ycm_rust_src_path="/home/<username>/Developer/rust-master/src/"
+```
 
 
 
