@@ -8,7 +8,7 @@
 
 sudo apt-get install vim
 ```
-If your `vi` did work in your command line, most likely it is the light version of `vi` which is installed by default in ubuntu, and it lacks the most functionality of the real `vi`
+If `vi` worked in your command line, it is most likely the light version of `vi` which is installed by default in Ubuntu, and it lacks most functionality of the real `vi`.
 
 
 You also need to install
@@ -78,7 +78,7 @@ git submodule update --init --recursive
 
 ```
 
-* Download the source code of version of rust you may be using, say [master branch](https://github.com/rust-lang/rust/)
+* Download source code of the rust version you are using, for example [master branch](https://github.com/rust-lang/rust/)
 * Extract the zip file and put in your Development folder ie. `~/Developer`
 * Checkout and build racer
 
@@ -99,9 +99,9 @@ let g:ycm_rust_src_path="/home/<username>/Developer/rust-master/src/"
 
 ### Install Vim number toggle
 
-[vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle) shows line numbers to the code you are editing in vim,
-You can toggle the numbers to absolute or relative position with respect to your current cursor location.
-This will boost your productivity later, when you orchestrate vim commands such as moving 10 lines below the current cursor location `10j`
+[vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle) adds line numbers to the code you are editing.
+Line numbers can either show absolute position or position relative to your cursor location.
+This will boost your productivity later, when you orchestrate vim commands such as moving 10 lines below the current cursor position: `10j`.
 
 
 
@@ -113,8 +113,8 @@ git clone git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 
 
 
-### Install NERDtree for displaying files in a tab
-[NERDTree](https://github.com/scrooloose/nerdtree) is kind of like the left side tabs of most text editors such as `sublime`, `atom`, or `eclipse` where it list down the files in the current directory you are editing from.
+### Install `NERDtree` for displaying files in a tab
+[NERDTree](https://github.com/scrooloose/nerdtree) is a file manager, that most text editors have, such as `sublime`, `atom`, or `eclipse` where it lists the files in the directory you are editing from.
 
 ```sh
 
@@ -145,33 +145,33 @@ CTRL-t  - Open/Close the files tab
 CTRL-n  - Toggle relative / absolute numbering
 CTRL-ww - Switch between the files tab and the main window
 F2      - Focus cursor to files tab
-<Enter> - open the focused files/directory, duh!
-h,j,k,l - navigate the cursor left, down, up, right respectively
-i       - insert mode, you can start typing in your code.
-<ESC>   - back to default mode, where you can issue commands in vi
-:w      - write/save the file, you are editing
-:wqa    - save the file, then quit the editor closing vi including the files tab
+<Enter> - Open the focused files/directory, duh!
+h,j,k,l - Navigate the cursor left, down, up, right respectively
+i       - Insert mode, you can start typing in your code.
+<ESC>   - Back to default mode, where you can issue commands in vi
+:w      - Write/save the file, you are editing
+:wqa    - Save the file, then quit the editor closing vi including the files tab
 ```
 ## Some advance commands
 
 ```sh
 
-:bp - Open previous file/buffer
-:bn - Open next file/buffer
-:b <filename-part> - Open the file you are looking for without typing the exact filename
-:vsp - vertically split the window
-:vsp <filename> - open the file in vertical split
-:sp - horizontal split
-:sp <filename> - open the file in horizontal split
+:bp                 - Open previous file/buffer
+:bn                 - Open next file/buffer
+:b <filename-part>  - Open the file you are looking for without typing the exact filename
+:vsp                - Vertically split the window
+:vsp <filename>     - Open the file in vertical split
+:sp                 - Horizontal split
+:sp <filename>      - Open the file in horizontal split
 
 ```
-* You don't really have to quit `wq` the editor, whenever you want to go back to the shell to build the project.
-A convenient way, is to open a new tab in a terminal via `<CTRL>` `<SHIFT>` `t`
-and issue you `cargo build --release` commands from there. That way, you don't loose state of your editor,
-i.e. you can undo `u` or redo `<CTRL>` `r` your code changes when needed
+* You don't really have to quit the editor using `wq` whenever you want to build the project.
+A convenient way is to open a new tab in a terminal via `<CTRL>-<SHIFT>-t`
+and issue your command (`cargo build --release`) from there. That way, you don't lose the state of your editor,
+i.e. you can undo `u` or redo `<CTRL>-r` your code changes when needed
 
 ## Compile without opening another tab
-Alternatively, you can compile your project without opening another terminal instance by issuing the command using `:! <external terminal command>`
+Alternatively, you can compile your project without opening another terminal instance by issuing the command directly from `vim` using `:! <external terminal command>`
 
 ```sh
 :! cargo run --release
@@ -195,9 +195,7 @@ vi main.rs
 
 ## Enable mouse support
 
-If you want to be able to use the mouse to point and click files, move the cursor around.
-
-* Add this to your `~/.vimrc`
+If you want to use the mouse to point and click files and move the cursor around, add this to your `~/.vimrc`
 
 ```
 
@@ -205,9 +203,8 @@ If you want to be able to use the mouse to point and click files, move the curso
 set mouse=a
 ```
 
-Additionally by default, you can use the arrow keys to navigate the cursor.
-However, If you are really serious about using vi and want to maximize your `vi` skills, you should minimize the use of the arrow keys or the mouse.
-
+Additionally, you can use arrow keys to move the cursor around.
+However, if you are really serious about using `vi` and want to maximize your `vi` skills, you should minimize the use of the arrow keys or the mouse.
 
 ![Using Mouse](https://raw.githubusercontent.com/ivanceras/rust-vim-setup/master/using-mouse.gif)
 
@@ -218,10 +215,9 @@ However, If you are really serious about using vi and want to maximize your `vi`
 
 ## Automatically reload files when changed
 
-Sometimes some of your files maybe edited outside of your current `vi` session, such other editors/code generators, dropbox sync, git pulls.
-You may want to have that content be in your current `vi` session instead.
+Sometimes some of your files might get edited outside of your current `vi` session, such as other editors/code generators, dropbox sync, git pulls.
 
-* Add this to your `~/.vimrc`
+* Add this to your `~/.vimrc` to refresh them automatically
 
 ```
 
@@ -230,37 +226,33 @@ set autoread
 au CursorHold * checktime  
 ```
 
-
-
-
 ## Enable the global Clipboard in vim
-In Linux distros, for some reason, you have to install `vim-gtk` first to gain clipboard functionality.
-http://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-using-vim
+In Linux distros, you have to install `vim-gtk` to gain clipboard functionality.
+
+[More information here.](http://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-using-vim)
 
 ```sh
 
 sudo apt-get install vim-gtk
 
 ```
-The you can
+Then you can
 
 Copy to `+` register, which is the global/OS clipboard
-"+y
+`"+y`
 
 Paste from `+` register
-"+p
+`"+p`
 
 
-Pasting is equivalent to 
-
-CTRL-SHIFT-v in insert mode. It is equivalent to Paste (CTRL-v) when used in terminal
-
+Pasting is equivalent to `<CTRL>-<SHIFT>-v` in insert mode.
+It is equivalent to pasting (`<CTRL>-v`) in terminal.
 
 
-## Install in one go for the lazy or those who never have used their vim before
-* Make sure you know what you are doing
-* This will replace your existing `~/.vimrc` and `.vim`, if you have one (No worries for non vim users)
-* Don't held me responsible for breaking your vim configuration, your laundry machine and anything that makes you angry.
+
+## One step install for those who have never used vim before or people who want to do it automatically
+* This will replace your existing `~/.vimrc` and `.vim`, if you have one
+* Don't hold me responsible for breaking your vim configuration, your laundry machine or anything else that would make you angry.
 
 ```sh
 
@@ -270,7 +262,7 @@ curl -sSf https://raw.githubusercontent.com/ivanceras/rustupefy/master/setup.sh 
 
 ```
 
-## Comeback here for changes?
+## Update
 
 * Update it via (same as setup)
 
