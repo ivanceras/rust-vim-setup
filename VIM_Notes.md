@@ -5,7 +5,7 @@
 	CTRL-w w 		switch focus on nerdtree and open windows
 	h,j,k,l			navigate the cursor left, down, up, right respectively
 	i				insert mode, you can start typing in your code
-	<ESC>   		gp back to normal/default mode, where you can issue vi commands
+	<ESC>   		go back to normal/default mode, where you can issue vi commands
 	:w      		write/save the file, you are editing
 	:wqa   			save the file, then quit the editor closing vi including the files tab
 	<F2>			set focus on the nerd tree
@@ -66,7 +66,7 @@
     
     
     
-#Cursor movement
+# Cursor movement
 
     h   	move left
     j   	move down
@@ -75,8 +75,8 @@
     
     	*Note: Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines.*
 
-    CTRL-b   page up
-    CTRL-f   page down
+    CTRL-b  page up
+    CTRL-f  page down
     %   	jump to matching brace
     w   	jump by start of words (punctuation considered words)
     W   	jump by words (spaces separate words)
@@ -90,20 +90,20 @@
     ^   	first non-blank character of line
     $   	end of line
     gg   	go to first line
-    G		go to last line of the file
+    G       go to last line of the file
     [N]G   	go To line N, (example 20G  - go to Line 20)
     
     
 # Inserting/Appending text
     
-    i  		start insert mode at cursor
-    I  		insert at the beginning of the line
-    a  		append after the cursor
-    A  		append at the end of the line
-    o  		open (append) blank line below current line (no need to press return)
-    O  		open blank line above current line
-	ea  	append at end of word
-    ESC  	exit insert mode, to normal mode
+    i   start insert mode at cursor
+    I   insert at the beginning of the line
+    a   append after the cursor
+    A   append at the end of the line
+    o   open (append) blank line below current line (no need to press return)
+    O   open blank line above current line
+	ea  append at end of word
+    ESC exit insert mode, to normal mode
     
 # Editing
     
@@ -117,47 +117,47 @@
     xp   	transpose two letters (delete and paste, technically)
     u   	undo
     CTRL-r  redo
-    .  		repeat last command
-    ~  		switch case
+    .       repeat last command
+    ~       switch case
     g~iw   	switch case of current word
     gUiw  	make current word uppercase
     guiw   	make current word lowercase
-    >>  	indent line one column to right
-    << 		indent line one column to left
-    == 		auto-indent current line
-    ddp		swap current line with next
+    >>      indent line one column to right
+    <<      indent line one column to left
+    ==      auto-indent current line
+    ddp     swap current line with next
     ddkP	swap current line with previous
     
 # Cut and Paste
     
-    dd  	delete (cut) a line
-    dw  	delete the current word
-    x  		delete current character
-    X  		delete previous character
-    D   	delete from cursor to end of line
-    yy 		yank (copy) a line
-    2yy	 	yank 2 lines
-    yw 		yank word
-    y$ 		yank to end of line
-    p 		put (paste) the clipboard after cursor/current line
-    P 		put (paste) before cursor/current line
+    dd  	    delete (cut) a line
+    dw  	    delete the current word
+    x           delete current character
+    X           delete previous character
+    D   	    delete from cursor to end of line
+    yy          yank (copy) a line
+    2yy         yank 2 lines
+    yw          yank word
+    y$          yank to end of line
+    p           put (paste) the clipboard after cursor/current line
+    P           put (paste) before cursor/current line
     :set paste  avoid unexpected effects in pasting
     
 # Visual Mode - Marking, Highligting text
     
-    v 		start visual mode, mark lines, then do command (such as y-yank)
-    V 		start Linewise visual mode (i.e selecting the whole line at the cursor location )
-    o 		move to other end of marked area
-    U 		upper case of marked area
-    CTRL-v 	start visual block mode (that is, selecting text in rectangular area marker)
-    O 		move to Other corner of block
-    aw 		mark a word
-    ab 		a () block (with braces)
-    aB 		a {} block (with brackets)
-    ib 		inner () block
-    iB 		inner {} block
-    ESC 	exit visual mode, go to normal mode
-    gv		re-select the last selected visual area
+    v       start visual mode, mark lines, then do command (such as y-yank)
+    V       start Linewise visual mode (i.e selecting the whole line at the cursor location )
+    o       move to other end of marked area
+    U       upper case of marked area
+    CTRL-v  start visual block mode (that is, selecting text in rectangular area marker)
+    O       move to Other corner of block
+    aw      mark a word
+    ab      a () block (with braces)
+    aB      a {} block (with brackets)
+    ib      inner () block
+    iB      inner {} block
+    ESC     exit visual mode, go to normal mode
+    gv      re-select the last selected visual area
    
    	*Note: right after entering visual mode, you can use the same cursor movement commands in the normal/default mode to highlight your selection*
     
@@ -165,12 +165,12 @@
 
 ## Commands
     
-    > 		shift right the marked text
-    <		shift left the marked text
-    c		change (replace) marked text
-    y 		yank (copy) marked text
-    d 		delete (cut) marked text
-    ~		switch case of the marked text
+    >   shift right the marked text
+    <   shift left the marked text
+    c   change (replace) marked text
+    y   yank (copy) marked text
+    d   delete (cut) marked text
+    ~   switch case of the marked text
     
 ## Cut and paste
     
@@ -181,70 +181,70 @@
     
 ## Exiting
     
-    :w - write (save) the file, but don't exit
+    :w  - write (save) the file, but don't exit
     :wq - write (save) and quit
-    :x - same as :wq
-    :q - quit (fails if anything has changed)
+    :x  - same as :wq
+    :q  - quit (fails if anything has changed)
     :q! - quit and throw away changes
     
 # Search/Replace
     
-    /pattern 		search for pattern
-    ?pattern  		search backward for pattern
-    n  				repeat search in same direction
-    N  				repeat search in opposite direction
-    :%s/old/new/g  	replace all old with new throughout file
-    :%s/old/new/gc      replace all old with new throughout file with confirmations
-    %                   Go to the corresponding (, {, [.
-    *                   Go to next occurrence of the word under the cursor
-    #                   Go to previous occurrence of the word under the cursor
+    /pattern        search for pattern
+    ?pattern        search backward for pattern
+    n               repeat search in same direction
+    N               repeat search in opposite direction
+    :%s/old/new/g   replace all old with new throughout file
+    :%s/old/new/gc  replace all old with new throughout file with confirmations
+    %               go to the corresponding (, {, [.
+    *               go to next occurrence of the word under the cursor
+    #               go to previous occurrence of the word under the cursor
 
     
 # Working with multiple files
     
-    :e filename  	Edit a file in a new buffer	
-    :n **/*.pl 		Open all perl files under the current directory, recursively
-    :tabe filename  Edit a file in a new tab (Vim7, gVim)
-    :bnext (or :bn) go to next buffer
-    :bprev (or :bp) go to previous buffer
-    :bd  			delete a buffer (close a file)
-    :sp filename  	Open a file in a new buffer and split window
-    CTRL-w s  		Split windows
-    CTRL-w w  		switch between windows
-    CTRL-w q  		Quit a window
-    CTRL-w v  		Split windows vertically
-    CTRL-w x  		Swap the current window with the next one
-    :e#                 Open previous file
-    CTRL-^              Edit the alternate file.  Mostly the alternate file is
+    :e filename     edit a file in a new buffer	
+    :n **/*.pl      open all perl files under the current directory, recursively
+    :tabe filename  edit a file in a new tab (Vim7, gVim)
+    :bnext (or :bn  go to next buffer
+    :bprev (or :bp  go to previous buffer
+    :bd             delete a buffer (close a file)
+    :sp filename    open a file in a new buffer and split window
+    CTRL-w s        split windows
+    CTRL-w w        switch between windows
+    CTRL-w q        quit a window
+    CTRL-w v        split windows vertically
+    CTRL-w x        swap the current window with the next one
+    :e#             Open previous file
+    CTRL-^          Edit the alternate file.  Mostly the alternate file is
                         the previously edited file.  This is a quick way to
                         toggle between two files.  It is equivalent to ":e#",
                         except that it also works when there is no file name.
 
 ### Moving the cursor in between windows
-    CTRL-w h  		Move cursor left to the current window
-    CTRL-w k  		Move cursor top to the current window
-    CTRL-w j  		Move cursor bottom to the current window
-    CTRL-w l  		Move cursor right to the current window
+    CTRL-w h    Move cursor left to the current window
+    CTRL-w k    Move cursor top to the current window
+    CTRL-w j    Move cursor bottom to the current window
+    CTRL-w l    Move cursor right to the current window
 
 ## Moving windows with respect to the current focused window
-    CTRL-w H  		Move current window to the far left
-    CTRL-w K  		Move current window to the top
-    CTRL-w J  		Move current window to the bottom
-    CTRL-w L  		Move current window to the right
+    CTRL-w H    Move current window to the far left
+    CTRL-w K    Move current window to the top
+    CTRL-w J    Move current window to the bottom
+    CTRL-w L    Move current window to the right
     
 ## Window movements
-	CTRL-w |		Maximize the window horizontally
-	CTRL-w _		Maximize the window vertically
-	CTRL-w =		Resize all window to equal sizes
+	CTRL-w |    Maximize the window horizontally
+	CTRL-w _    Maximize the window vertically
+	CTRL-w =    Resize all window to equal sizes
     
 # Changeset, last edit jumping back and forth
-	`.  		jump to the last edit
-	g;  		go to previous edit
-	g,   		go to next edit
-	CTRL-o  	go to previous edit
-	CTRL-i  	to to next edit
-	''		jump to last location (no-edits)
-	``		jump to last location (no-edits)
+	`.      jump to the last edit
+	g;      go to previous edit
+	g,      go to next edit
+	CTRL-o  go to previous edit
+	CTRL-i  go to next edit
+	''      jump to last location (no-edits)
+	``      jump to last location (no-edits)
 
 # Fuzzy searching files with CTRL.P plugin
     CTRL-p    Open up search user interface
